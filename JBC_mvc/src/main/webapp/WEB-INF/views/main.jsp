@@ -8,6 +8,8 @@
 
 <p>Hello ${user.name}!</p>
 <p>Your password is  ${user.password}!</p>
+<p>Your admin value is  ${user.admin}!</p>
+
 
 
 
