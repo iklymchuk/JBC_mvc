@@ -21,9 +21,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView main(HttpSession session) {
-
-		WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(session.getServletContext());
-
+			WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(session.getServletContext());
 		return new ModelAndView("login", "user", new User());
 	}
 
@@ -31,5 +29,9 @@ public class LoginController {
 	public ModelAndView checkUser(@ModelAttribute("user") User user) {
 		return new ModelAndView("main", "user", user);
 	}
-
+	
+	@RequestMapping(value = "/failed", method = RequestMethod.GET)
+	public ModelAndView failed () {
+		return new ModelAndView("login-failed", "message", "Login failed");
+	}
 }
