@@ -24,5 +24,4 @@ public class CheckUserInterceptor extends HandlerInterceptorAdapter {
 					
 				}
 		}
-
 }
